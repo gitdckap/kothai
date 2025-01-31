@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="suggestion_general"
+        android:title="Suggestion">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:fontFamily="@font/inter"
+            android:key="dictionary_suggestion"
+            android:summary="Enable to suggest dictionary words"
+            android:title="Dictionary Suggestion" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:fontFamily="@font/inter"
+            android:key="auto_correction"
+            android:summary="Enable to auto correction words"
+            android:title="Suggest text corrections" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="layout_general"
+        android:title="Layout">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:fontFamily="@font/inter"
+            android:key="key_preview"
+            android:summary="Enable to get key preview popup"
+            android:title="Enable key preview" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:fontFamily="@font/inter"
+            android:key="vibrate_keyPress"
+            android:summary="Enable to get haptic feedback"
+            android:title="Vibration on KeyPress" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:fontFamily="@font/inter"
+            android:key="sound_keyPress"
+            android:summary="Enable to get sound on key press"
+            android:title="Sound on KeyPress" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="update_general"
+        android:title="Software Update">
+        <Preference
+            android:fontFamily="@font/inter"
+            android:key="update_check"
+            android:selectable="true"
+            android:summary="Check your application up-to date"
+            android:title="Check Update" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434786931086",
+    "project_id": "kothai---tamil-keyboard-c57c8",
+    "storage_bucket": "kothai---tamil-keyboard-c57c8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434786931086:android:6acc636802708229c6d4df",
+        "android_client_info": {
+          "package_name": "com.dckap.kothai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqLPqp-Rl1tHRqUdp94m_whH2SgnbbYdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

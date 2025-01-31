@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/key_preview_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_shadow"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/preview_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inter"
+        android:padding="2dp" />
+</FrameLayout>

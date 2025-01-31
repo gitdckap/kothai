@@ -1,0 +1,51 @@
+<resources>
+
+    <dimen name="shadow_radius">0.3dp</dimen>
+    <dimen name="shadow_Y">1.0dp</dimen>
+
+    <dimen name="number_pad_shadow_radius">1.0dp</dimen>
+    <dimen name="number_pad_shadow_Y">0.7dp</dimen>
+
+    <dimen name="key_radius">6dp</dimen>
+
+    <dimen name="number_pad_key_radius">14dp</dimen>
+
+    <dimen name="english_key_icon_left">2dp</dimen>
+    <dimen name="english_key_icon_right">4dp</dimen>
+
+    <dimen name="symbol_letter_size">18sp</dimen>
+    <dimen name="english_letter_size">22sp</dimen>
+    <dimen name="english_number_size">12sp</dimen>
+
+    <dimen name="english_key_Y">20dp</dimen>
+    <dimen name="english_key_top">15dp</dimen>
+    <dimen name="english_key_bottom">26dp</dimen>
+
+    <dimen name="english_key_X">10dp</dimen>
+    <dimen name="english_key_left">5dp</dimen>
+    <dimen name="english_key_right">10dp</dimen>
+
+    <dimen name="english_key_label_main_X">12dp</dimen>
+    <dimen name="english_key_label_X">2dp</dimen>
+
+    <dimen name="english_key_label_number_Y">10dp</dimen>
+    <dimen name="english_key_label_text_Y">7dp</dimen>
+
+    <dimen name="key_pop_up_Y">35dp</dimen>
+
+    <dimen name="tamil_key_2dp">2dp</dimen>
+    <dimen name="tamil_key_3dp">3dp</dimen>
+    <dimen name="tamil_key_4dp">4dp</dimen>
+    <dimen name="tamil_key_6dp">6dp</dimen>
+    <dimen name="tamil_key_8dp">8dp</dimen>
+    <dimen name="tamil_key_10dp">10dp</dimen>
+    <dimen name="tamil_key_12dp">12dp</dimen>
+
+    <dimen name="tamil_key_letter_14sp">14sp</dimen>
+    <dimen name="tamil_key_letter_16sp">16sp</dimen>
+    <dimen name="tamil_key_letter_19sp">19sp</dimen>
+    <dimen name="tamil_key_letter_12sp">12sp</dimen>
+
+    <dimen name="key_letter_30sp">30sp</dimen>
+
+</resources>

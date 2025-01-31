@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/main_giphy_picker_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/gif_click_progress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="40dp"
+                android:minHeight="40dp" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Cancel" />
+
+        </LinearLayout>
+
+        <com.giphy.sdk.ui.views.GiphyGridView
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/emoji_view_background"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/footer_giphy_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/keyboard_background_dark"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:id="@+id/footer_giphy_scroll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:background="@color/keyboard_background_dark"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/giphy_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/main_emoji_picker_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/keyboard_background_dark"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/top_emoji_bar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/switch_button"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_leftarrow" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="0.5"
+                    android:autofillHints="Search"
+                    android:background="@drawable/search_input_border"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="12dp"
+                    android:hint="Search"
+                    android:inputType="text"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/top_emoji_icon_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/icon_background"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/top_emoji_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="2dp"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_smiley_emoji"
+                        app:tint="@color/light_intro_icon_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gif_icon_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/gif_icon"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_gif"
+                        app:tint="@color/light_intro_icon_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mode_button_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end">
+
+                    <ImageButton
+                        android:id="@+id/mode_button"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_lightmode"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/emoji_search_list"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/emoji_view_background"
+                android:paddingHorizontal="10dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.example.customkeyboard.component.GiphyPickerView
+            android:id="@+id/giphy_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/emoji_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/emojiListView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/emoji_view_background" />
+
+            <LinearLayout
+                android:id="@+id/footer_emoji_bar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/keyboard_background_dark"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.3"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/abc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ABC"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recent_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_input_border"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/recent"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_recent"
+                        app:tint="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/smileys_people_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/smileys_people"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_smileys_people" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/animals_nature_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/animals_nature"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_animals_nature" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/food_drink_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/food_drink"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_food_drink" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/activity"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_activity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/travel_places_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/travel_places"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_travel_places" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/objects_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/objects"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_objects" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/symbols_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/symbols"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_symbols" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/flags_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/flags"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_flags" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/delete_button"
+                        style="@style/Setting_icon_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_clear"
+                        app:tint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>
