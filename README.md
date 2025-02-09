@@ -13,7 +13,7 @@ Kothai is a Tamil handwriting-style keyboard app that brings the essence of hand
 
 Contributions are welcome! Please follow these steps:
 - Fork the repository
-- Create a new branch (git checkout -b feature-branch)
-- Commit your changes (git commit -m 'Add new feature')
-- Push to the branch (git push origin feature-branch)
+- Create a new branch (`git checkout -b feature-branch`)
+- Commit your changes (`git commit -m 'Add new feature'`)
+- Push to the branch (`git push origin feature-branch`)
 - Open a Pull Request
