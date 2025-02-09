@@ -11,7 +11,7 @@ Kothai is a Tamil handwriting-style keyboard app that brings the essence of hand
 
 ### 🤝 Contributing
 
-- Contributions are welcome! Please follow these steps:
+Contributions are welcome! Please follow these steps:
 - Fork the repository
 - Create a new branch (git checkout -b feature-branch)
 - Commit your changes (git commit -m 'Add new feature')
